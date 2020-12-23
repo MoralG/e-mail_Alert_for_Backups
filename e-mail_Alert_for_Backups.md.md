@@ -91,7 +91,7 @@ El arn se asigna solo, se elige el tipo de protocolo, en este caso ``Email`` y e
 
 Si el protocolo es de ``Email``, hay que confirmar la subcripción en un correo de confirmación.
 
-![Confirm_subscription](image/Confirm_subscription.PNG)
+![confirm_subscription](image/confirm_subscription.PNG)
 
 Por último tenemos que ejecutar el siguiente comando en `AWS cli`.
 
