@@ -6,13 +6,13 @@ Se accede al servicio ``AWS Backups > Backups plans > Create Backup plan`` y se 
 
 Se elige la opción `Build a new plan` y se asigna un nombre. 
 
-![name_backup_plan](image/name_backup_plan.png)
+![name_backup_plan](image/name_backup_plan.PNG)
 
 En la misma página en la parte inferior, se va a configurar el `Backup rule`. Las reglas de las copias de seguridad es para indicar cada cuanto tiempo hay que realizar las copias de seguridad.
 
 Se le asigna un nombre y se define la regla de respaldo con ``backup schedule``, ``backup window`` y ``lifecycle rules``.
 
-![backup_rule](image/backup_rule.png)
+![backup_rule](image/backup_rule.PNG)
 
 Se deja el `Backup Vault` por defecto y creamos el plan.
 
@@ -22,7 +22,7 @@ Lo siguiente es añadir los recursos que se quiera realizar la zopia de segurida
 
 Se le asigna el nombre y en `Assign by` se elige `Resource ID`, el tipo de recurso y el id del recurso.
 
-![assign_resources2](image/assign_resources2.png)
+![assign_resources2](image/assign_resources2.PNG)
 
 Ahora se va a crear un `Topics` con el servicio de ***SNS**. Se accede a `Amazon SNS > Topics > Create topics` 
 
@@ -30,11 +30,11 @@ Ahora se va a crear un `Topics` con el servicio de ***SNS**. Se accede a `Amazon
 
 Se asigna el nombre del topic y el tipo ``Standard``.
 
-![create_topic](image/create_topic.png)
+![create_topic](image/create_topic.PNG)
 
 Se añade una política de acceso:
 
-![access_policy](image/access_policy.png)
+![access_policy](image/access_policy.PNG)
 
 Hay que añadir el arn del topic creado anteriormente y la id del propietario. Esta id se puede conseguir en `Amazon SNS > Topics > testBackupTopic`.
 
@@ -87,11 +87,11 @@ Lo sigueinte es crear una subcripción, para acceder en `Amazon SNS > Topics > t
 
 El arn se asigna solo, se elige el tipo de protocolo, en este caso ``Email`` y el `Endpoint` que es el punto final donde acabrá llegando las alertas, nuestro correo.
 
-![create_subscription](image/create_subscription.png)
+![create_subscription](image/create_subscription.PNG)
 
 Si el protocolo es de ``Email``, hay que confirmar la subcripción en un correo de confirmación.
 
-![Confirm_subscription](image/Confirm_subscription.png)
+![Confirm_subscription](image/Confirm_subscription.PNG)
 
 Por último tenemos que ejecutar el siguiente comando en `AWS cli`.
 
